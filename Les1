@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[5]:
+
+
+import pandas as pd
+
+data = {"Bob":[8,6,4],"Els":[6,8,9],"Karel":[9,8,7]}
+
+df = pd.DataFrame.from_dict(data)
+
+
+# In[14]:
+
+
+list_cols = ["Els","Karel"]
+df2 =df[list_cols]
+
+
+# In[20]:
+
+
+#Totaal berekenen
+df["Totaal"] = df["Bob"]+df["Els"]+df["Karel"]
+#gemiddelde berekenen 2 cijfers na de komma
+df["Gemiddelde"] = round((df["Bob"]+df["Els"]+df["Karel"])/3,2)
+df
+
